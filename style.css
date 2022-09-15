@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/* to reset the default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(257, 40%, 49%);
+}
+.container{
+    max-width: 1320px;
+    height:100vh;
+    margin: 0 auto;
+}
+.wrapper{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: 0 2rem;
+}
+.header{
+    width: 260px;
+    padding-bottom: 20px;
+}
+.main-content{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+/* image text section  */
+.image-text h1{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+.image-text p{
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-text a{
+    background-color: #fff;
+    color: hsl(257, 40%, 49%);
+    padding: 10px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .3s ease;
+    box-shadow: 0 8px 17px -8px rgba(0,0,0,.8);
+}
+.image-text a:hover{
+    background-color:hsl(300, 69%, 71%) ;
+    color: #fff;
+}
+.socials{
+    text-align: right;
+}
+.socials a i{
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+}
+
+.socials a:not(:first-child){  /* use to add an default margin in first-child */
+    margin-left:2rem;
+}
+
+.socials a i::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width:40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    left: -14px;
+    bottom: -12px;
+    transition: all .3s ease;
+}
+
+.socials a i:hover{
+    color:hsl(300, 69%, 71%) ; ;
+}
+.socials a i:hover::after{
+    border-color:hsl(300, 69%, 71%) ;;
+}
+
+/* make it responsive */
+
+@media only screen and (max-width:1320px){
+    .image img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .main-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h1{
+        font-size: 26px;
+    }
+    .socials{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .hero-text a{
+        padding: 10px 70px;
+    }
+}
+}
